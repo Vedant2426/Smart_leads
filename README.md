@@ -113,7 +113,7 @@ The project follows a scalable full-stack architecture with clear separation of 
 # Folder Structure
 
 ```txt
-smart-leads-dashboard/
+Smart_leads/
 │
 ├── client/
 │
