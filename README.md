@@ -1,7 +1,20 @@
 # Smart Leads Dashboard
+
 GitHub Repository: https://github.com/Vedant2426/Smart_leads
 
-A production-grade full-stack CRM-style lead management dashboard built using the MERN stack with TypeScript. The application provides secure authentication, role-based access control, advanced lead filtering, pagination, CSV export functionality, and a responsive dashboard UI designed with scalable architecture and clean engineering practices.
+A production-grade full-stack CRM-style Lead Management Dashboard built using the MERN stack with TypeScript. The application provides secure authentication, role-based access control, advanced lead filtering, pagination, CSV export functionality, and a responsive dashboard UI designed with scalable architecture and clean engineering practices.
+
+---
+
+# Live Deployment
+
+### Frontend
+https://smarlead.netlify.app
+
+### Backend API
+https://smart-leads-2eo6.onrender.com
+
+> Note: Backend is hosted on Render free tier, so the first API request may take a few seconds due to server cold starts.
 
 ---
 
@@ -18,7 +31,7 @@ A production-grade full-stack CRM-style lead management dashboard built using th
 - Create Lead
 - View Leads
 - Update Lead
-- Delete Lead
+- Delete Lead (Admin Only)
 - View Single Lead Details
 
 ## Advanced Filtering & Search
@@ -31,7 +44,7 @@ A production-grade full-stack CRM-style lead management dashboard built using th
 
 ## Pagination
 - Backend Pagination
-- Pagination Metadata
+- Frontend Pagination Controls
 - Optimized Database Queries using skip & limit
 
 ## CSV Export
@@ -52,8 +65,8 @@ A production-grade full-stack CRM-style lead management dashboard built using th
 - Centralized Error Handling
 - Clean Folder Structure
 - TypeScript Strict Typing
-- Dockerized Setup
 - Environment Variable Configuration
+- Docker Support
 
 ---
 
@@ -79,12 +92,12 @@ A production-grade full-stack CRM-style lead management dashboard built using th
 - JWT Authentication
 - bcryptjs
 
-## DevOps & Deployment
+## Deployment & DevOps
+- Netlify
+- Render
+- MongoDB Atlas
 - Docker
 - Docker Compose
-- MongoDB Atlas
-- Vercel / Netlify
-- Render / Railway
 
 ---
 
@@ -116,9 +129,7 @@ The project follows a scalable full-stack architecture with clear separation of 
 Smart_leads/
 │
 ├── client/
-│
 ├── server/
-│
 ├── docker-compose.yml
 ├── README.md
 └── .env.example
@@ -132,16 +143,16 @@ Smart_leads/
 
 ```env
 PORT=5000
-MONGO_URI=your_mongodb_uri
+MONGODB_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
 JWT_EXPIRES_IN=7d
-CLIENT_URL=http://localhost:5173
+CORS_ORIGIN=http://localhost:5173
 ```
 
 ## Client (.env)
 
 ```env
-VITE_API_URL=http://localhost:5000/api
+VITE_API_BASE_URL=http://localhost:5000/api
 ```
 
 ---
@@ -232,28 +243,12 @@ Supported Parameters:
 
 ---
 
-# Demo Credentials
+# RBAC Roles
 
-## Admin User
-
-```txt
-Email: admin@example.com
-Password: password123
-```
-
-## Sales User
-
-```txt
-Email: sales@example.com
-Password: password123
-```
-
----
-
-# Deployment
-
-Frontend: Pending Deployment  
-Backend: Pending Deployment
+| Role | Permissions |
+|---|---|
+| Admin | Full CRUD access including Delete |
+| Sales | Create, Read, Update access |
 
 ---
 
@@ -280,4 +275,4 @@ Vedant Awachar
 
 # License
 
-This project was built as part of a Full Stack Internship Assignment.
+This project was developed as part of a Full Stack Internship Assignment submission.
